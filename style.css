@@ -8,9 +8,7 @@ table, th, td {
     text-align: center;
   }
   
-  table {
-    width: 100%;
-  }
+
   .horarios_t, .time_h{
     width: 20%;
   }
@@ -23,10 +21,8 @@ table, th, td {
     height: 500px;
     width: 80%;
     margin-left: 9%;
-
-
   }
-
+ 
   .querer {
     transition: transform 1s;
     font-size: 43px;
@@ -60,4 +56,29 @@ table, th, td {
     95% { color: black; }
     100% { color: gray; }
   }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
   
+  table {
+    border-collapse: collapse;
+    width: 45%;
+    margin-bottom: 20px;
+    border-color: black;
+    border-radius: 5px;
+    border-top-color: black;
+    
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
