@@ -3,7 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="./script.js">
 </head>
 
 <body>
@@ -389,22 +389,67 @@
             <td>00h15</td>
             <td>Dormir</td>
           </tr>
+          </tbody>
+          </table>
 
     </div>
   </div>
 
-  <br>
-  <br>
-  <br>
   <br>
      <h1 class="querer">
       Coloque seu mapa do sonho abaixo 
      </h1>
   <br>
   <br>
+
   <br>
-  <br>
-  <br>
+  
+  
+ 
+	<div class="carousel-container">
+		<div class="carousel-images">
+			<img src="./IMG_2389.jpg" alt="Image 1" class="active">
+			<img src="./IMG_2391.jpg" alt="Image 2">
+			<img src="./IMG_2390.jpg" alt="Image 3">
+			<img src="./JOB.png" alt="Image 4">
+		</div>
+		<div class="carousel-buttons">
+			<button class="carousel-button active" onclick="showImage(0)"></button>
+			<button class="carousel-button" onclick="showImage(1)"></button>
+			<button class="carousel-button" onclick="showImage(2)"></button>
+			<button class="carousel-button" onclick="showImage(3)"></button>
+		</div>
+	</div>
+
+  <script>
+    const images = document.querySelectorAll('.carousel-images img');
+const buttons = document.querySelectorAll('.carousel-button');
+let currentIndex = 0;
+
+function activateImage(index) {
+    // Remove a classe "active" de todas as imagens
+    images.forEach(image => {
+        image.classList.remove('active');
+    });
+
+    // Adiciona a classe "active" à imagem selecionada
+    images[index].classList.add('active');
+
+    // Atualiza o índice atual
+    currentIndex = index;
+}
+
+function showImage(index) {
+    activateImage(index);
+
+    // Adiciona a classe "active" ao botão correspondente
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+    buttons[index].classList.add('active');
+}
+  </script>
+  
 </body>
 
 </html>
